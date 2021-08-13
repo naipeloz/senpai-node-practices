@@ -14,17 +14,26 @@ app.get('/ciudades',(req, res)=>{
 });
 
 
-app.get('/temperatura/:id',(req, res)=>{
-    
+app.get('/dataCiudad/:id',(req, res)=>{    
     const id = req.params.id;
-    const tmpCiudades = data.tmpCiudades;
+    const dataCiudades = data.dataCiudades;
     // NO ES LO MIMSO
     // const respuesta = tmpCiudades.map((ciudad)=>{
     //     if(ciudad.id == id){
     //         return ciudad;
     //     }
     // })    
-    const respuesta = tmpCiudades.filter((item)=>{
+    const respuesta = dataCiudades.filter((item)=>{
+        return item.id == id;
+    })
+    res.json(respuesta);     
+});
+
+
+app.post('/dataCiudadMes',(req, res)=>{    
+    const id = req.body.id;
+    const dataCiudadesMes = data.dataCiudadesMes;
+    const respuesta = dataCiudadesMes.filter((item)=>{
         return item.id == id;
     })
     res.json(respuesta);     
