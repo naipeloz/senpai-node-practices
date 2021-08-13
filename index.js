@@ -12,7 +12,6 @@ app.get('/', (request, response)=>{
 });
 
 app.get('/ciudades',(req, res)=>{
-    // console.log(data.ciudades);   
     res.json(data.ciudades)     
 });
 
