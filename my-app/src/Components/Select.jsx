@@ -5,7 +5,7 @@ const Select = (props) => {
 
   const handleSubmit =(event)=>{
     event.preventDefault();
-    // agregar aca una funcion filter para seleccionar la ciudad??
+    // los otros componentes toman lo seleccionado para mostrar la info??
   }
 
 
