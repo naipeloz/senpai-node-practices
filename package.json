@@ -1,0 +1,23 @@
+{
+  "name": "senpai-node-practices",
+  "version": "1.0.0",
+  "description": "Proyecto de prueba Node Senpai",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naipeloz/senpai-node-practices.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naipeloz/senpai-node-practices/issues"
+  },
+  "homepage": "https://github.com/naipeloz/senpai-node-practices#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  }
+}
