@@ -1,8 +1,7 @@
 import {BrowserRouter,Switch,Route} from 'react-router-dom';
-
 import logo from './logo.svg';
 import './App.css';
-
+import LandingPage from './Pages/Landing/index'
 
 function App() {
   return (
@@ -10,7 +9,7 @@ function App() {
       <Switch> 
         <Route path="/landingPage">
           <>
-          LandingPage
+          <LandingPage />
           </>
         </Route>
         <Route path="/city">

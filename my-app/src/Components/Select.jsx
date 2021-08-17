@@ -1,37 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const Select = () => {
+const Select = (props) => {
+  const [ciudad, setCiudad] = useState('');
 
-
-    labelId="demo-simple-select-label"
-    id="demo-simple-select"
-    onChange={(e) => {
-      onChange(e)
-      handleChange(e) <- call handleChange
-    }}
-    value={value ? value : ""}
-    name={name}
+  const handleSubmit =(event)=>{
+    event.preventDefault();
+    // agregar aca una funcion filter para seleccionar la ciudad??
+  }
 
 
   return (
     <>
-      <select name="ciudad" 
-      labelId="Ciudad"
-      onChange={(e) => {
-        onChange(e)
-        handleChange (e)
-
-      }}
-      >
-        <option className="coloraz font-bold"></option>
-        <option className="coloraz font-bold" value="1/2BPCsinAdicional">
-          Valor de Opcion
-        </option>
+      <form onSubmit={(event)=> handleSubmit (event)}>
+      <label>Elegir Ciudad:</label>
+      <select  onChange={(event) => setCiudad(event.target.value)}  value={ciudad}>
+        {/* Las opciones se podrian traer con un .map??? */}
+        <option value=''>-------</option>
+        <option value={props.name}>{props.name}</option>
       </select>
+      <button type='submit'>Seleccionar</button>
+      </form>
     </>
   );
 };
 
 export default Select;
-
-
