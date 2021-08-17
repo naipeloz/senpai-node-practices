@@ -15,7 +15,7 @@ function App() {
         </Route>
         <Route path="/city">
           <>
-          City
+          <Citys />
           </>
         </Route>
       </Switch>
