@@ -1,15 +1,19 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 5000;
+const path = require('path');
+
+const store = require('data-store')({ path: path.join(__dirname, "data", "test.json") });
 
 const userRoutes = require('./routes/user');
 
 app.get('/', (request, response) => {
-  response.send("Bienvenidos a nuestra app");
+  store.set('test', 'two'); 
+  response.json(store.get());
 })
 
 app.use('/user', userRoutes);
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("El servidor esta funcionando");
 });
