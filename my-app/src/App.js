@@ -1,22 +1,20 @@
-import {BrowserRouter,Switch,Route} from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import logo from './logo.svg';
 import './App.css';
+import viento from './Pages/City'
 
 
 function App() {
   return (
     <BrowserRouter>
-      <Switch> 
+      <Switch>
         <Route path="/landingPage">
           <>
-          LandingPage
+            LandingPage
           </>
         </Route>
-        <Route path="/city">
-          <>
-          City
-          </>
+        <Route path="/city"><viento />
         </Route>
       </Switch>
     </BrowserRouter>
