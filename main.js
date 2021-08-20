@@ -12,6 +12,7 @@ app.get('/', (request, response) => {
 app.post('/', (request, response) => {
   response.send("Groupal Node session POST")
 })
+
 // Routers
 app.use('/test', testRoutes);
 
