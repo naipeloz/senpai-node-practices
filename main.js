@@ -13,10 +13,6 @@ app.get('/', (request, response) => {
 app.post('/', (request, response) => {
   response.send("Groupal Node session POST")
 })
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 // Routers
 app.use('/test', testRoutes);
 app.use('/group_2', testPokemon);
