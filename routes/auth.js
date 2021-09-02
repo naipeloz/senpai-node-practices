@@ -2,7 +2,6 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { TOKEN_SECRET, verifyToken } = require('../middlewares/jwt');
-const { response } = require('express');
 const router = express.Router();
 
 const users = [];
@@ -54,7 +53,7 @@ router.post('/login', async (request, response) => {
 });
 
 router.get('/usuarios', verifyToken, async (request, response) => {
-  console.log("Users: ", users);
+  console.log("User: ", request.user);
   response.json({
     success: true,
     users
