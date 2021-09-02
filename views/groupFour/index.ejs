@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('../partials/head') %>
+  <title>Practica Node JS</title>
+</head>
+<body>
+  <div class="container flex mx-auto">
+    <div class="flex flex-col">
+      <div class="mb-8">
+        <h1 class="text-blue-500 text-6xl">Grupo 4 </h1>
+        <h2 class="text-blue-300 text-3xl">Consulta de cursos</h2>
+      </div>
+      <div>
+        <p>Deberan implementar un API que permita consultar cursos. </p>
+        <h3 class="text-blue-500 font-bold">Requerimientos</h3>
+        <ul>
+          <li>Crear una branch a partir de practice/auth en la que van a trabajar los miembros del equipo</li>
+          <li>Una ruta GET que reciba un parametro category y muestre los cursos de esa categoria</li>
+          <li>Una ruta POST para realizar la consulta de cursos, debe recibir un json como el de abajo y regresar el listado de los cursos de esa categoria que cuesten menos del valor indicado en el formato que quieran 
+            <pre>
+              <code>
+                {
+                    "category": "art",
+                    "value": 5000
+                }
+              </code>
+            </pre>
+          </li>
+          <li>Una ruta <strong>protegida</strong> tipo POST en la que que se puede crear o actualizar cursos. Si el curso ya existe debe modificar el valor existente. Debe recibir un json así:
+            <pre>
+              <code>
+                {
+                    "name": "Acuarela para dummies",
+                    "cateory": "art"
+                    "value": 5000
+                }
+              </code>
+            </pre>
+            Debe retornar un mensaje que diga si actualizó o creó una divisa
+          </li>
+          <li>Una página en la que muestren cuáles son los endpoints/direcciones que se pueden consultar</li>
+          <li>Una página <strong>protegida</strong> en la que se muestre el nombre del usuario en algun lado y un listado </li>
+          <li>Una vez terminado el tiempo o el ejercicio <strong>SE DEBE</strong> hacer un pr de su branch a practice/auth</li>
+        </ul>
+        <%- include('../partials/tips') %>
+      </div>
+    </div>
+  </div>
+    
+</body>
+</html>

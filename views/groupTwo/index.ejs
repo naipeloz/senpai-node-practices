@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('../partials/head') %>
+  <title>Practica Node JS</title>
+</head>
+<body>
+  <div class="container flex mx-auto">
+    <div class="flex flex-col">
+      <div class="mb-8">
+        <h1 class="text-blue-500 text-6xl">Grupo 2 </h1>
+        <h2 class="text-blue-300 text-3xl">Temperaturas</h2>
+      </div>
+      <div>
+        <p>Deberan implementar un API que permita consultar temperaturas y calcular promedios. </p>
+        <h3 class="text-blue-500 font-bold">Requerimientos</h3>
+        <ul>
+          <li>Crear una branch a partir de practice/auth en la que van a trabajar los miembros del equipo</li>
+          <li>Una ruta GET que reciba un parametro city y muestre las temperaturas de esa ciudad</li>
+          <li>
+            Una ruta POST para realizar la consulta de las temperaturas de una ciudad, debe recibir un json como el de abajo y regresar el promedio de temperaturas hasta el dia indicado en el json 
+            <pre>
+              <code>
+                {
+                    "city": "Montevideo",
+                    "day": 29
+                }
+              </code>
+            </pre>
+            el promedio se puede regresar en el formato que deseen
+          </li>
+          <li>
+            Una ruta <strong>protegida</strong> tipo POST en la que que se puede agregar o actualizar una temperatura. Si ya existe una temperatura para esa ciudad y ese dia debe modificar el valor existente. Debe recibir un json así:
+            <pre>
+              <code>
+                {
+                    "city": "Montevideo",
+                    "day": 1,
+                    "temperature": 24,
+
+                }
+              </code>
+            </pre>
+            Debe retornar un mensaje que diga si actualizó o creó un registro
+          </li>
+          <li>Una página en la que muestren cuáles son los endpoints/direcciones que se pueden consultar</li>
+          <li>Una página <strong>protegida</strong> en la que se muestre el nombre del usuario en algun lado y un listado </li>
+          <li>Una vez terminado el tiempo o el ejercicio <strong>SE DEBE</strong> hacer un pr de su branch a practice/auth</li>
+        </ul>
+        <%- include('../partials/tips') %>
+      </div>
+    </div>
+  </div>
+    
+</body>
+</html>
