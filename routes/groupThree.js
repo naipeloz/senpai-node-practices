@@ -21,12 +21,13 @@ router.post('/compare', async(request, response) => {
   const hood2 = request.body.hood2;
   const barrio1 = data.find((item) => item.hood == hood1);
   const barrio2 = data.find((item) => item.hood == hood2);
-  console.log(barrio1.hood)
-  if(barrio1?.value > barrio2?.value) {
-    response.send("El valor del Barrio:",barrio1.value);
+  const valor1 = barrio1?.value
+  const valor2 = barrio2?.value
+  if(valor1 < valor2) {
+    response.send("uwuEl valor mas bajo es:",valor1);
   }
   else {
-    response.send("El valor del Barrio:",barrio2.value);
+    response.send({"El valor mas bajo es:": valor2});
 
   }
 })
