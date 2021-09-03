@@ -9,8 +9,9 @@ router.get('/', (request, response) => {
 
 router.post('/consult-city-tem', async (request, response) => {
   const city = request.body.city;
-  const day =request.body.day;
   const temperature = request.body.temperature;
+  const day = day.find((item) => day.city === day);
+  
 })
 
 router.get('/city-tem', (request, response) => {
