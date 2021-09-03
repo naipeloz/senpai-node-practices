@@ -15,8 +15,11 @@ router.post('/consult-city-tem', async (request, response) => {
 })
 
 router.get('/city-tem', (request, response) => {
-  response.render('groupTwo/index');
-})
+  const city = request.query.city;
+  console.log('city:',city);
+  response.send("Ciudad")
 
+ })
+ 
 
 module.exports = router;
