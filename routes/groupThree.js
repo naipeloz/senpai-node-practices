@@ -8,15 +8,23 @@ router.get('/', (request, response) => {
   response.render('groupThree/index');
 })
 router.post('/nuevobarrio',async (request, response) => {
+  const { hood, description, value } = request.body
   const barrio = {
-    hood : request.body.hood,
-    description: request.body.description,
-    value:request.body.value,
+    hood : hood,
+    description: description,
+    value:value,
      }
+    
   data.push(barrio);
   response.send(data)
 })
+router.get('/barrio',(req,response) =>{
+  const hood = req.body.hood;
+  const barrio = data.find((item)=> item.hood === hood )
+  response.send({barrio})
+})
 router.post('/compare', async(request, response) => {
+  
   const hood1 = request.body.hood1;
   const hood2 = request.body.hood2;
   const barrio1 = data.find((item) => item.hood == hood1);
