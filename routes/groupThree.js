@@ -1,12 +1,17 @@
 const express = require('express');
 const { verifyToken } = require('../middlewares/jwt');
 const router = express.Router();
+const cors = require('cors');
+const path = require('path');
 
 const data = [];
-
 router.get('/', (request, response) => {
   response.render('groupThree/index');
 })
+router.get('/comandos', (request, response) => {
+  response.render('groupThree/comandos')
+})
+router.use(cors());
 router.post('/nuevobarrio',async (request, response) => {
   const { hood, description, value } = request.body
   const barrio = {
