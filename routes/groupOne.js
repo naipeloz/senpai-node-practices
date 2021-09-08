@@ -58,7 +58,8 @@ router.post('/cotizacion', (request,response)=>{
 
   const getCurrency = data.find((item)=> item.currency == body.currency);
   let error = '';
-  let cotizacion = '';
+  let cotizacion = {};
+  let result = false;
 
   if(getCurrency){
       //GENERO COTIZACION
@@ -70,10 +71,9 @@ router.post('/cotizacion', (request,response)=>{
       result = true;      
   }else{    
     error = `No se econtró la divisa: ${cotizacion.currency}`;      
-    result = false;
   }
   response.json({
-    result:false,
+    result,
     cotizacion,
     error
   });
